@@ -25,6 +25,9 @@ print(f"Model's Linear Equation: y={coef[0]}x1 + {coef[1]}x2 + {intercept}")
 print("R Squared value:", r_squared)
 
 # get the predicted y values for the xtest values - returns an array of the results
+# xtest.add([89000, 10])
+# xtest.add([150000, 20])
+# print(xtest)
 predict = model.predict(xtest)
 # round the value in the np array to 2 decimal places
 predict = np.around(predict, 2)
@@ -40,3 +43,7 @@ for index in range(len(xtest)):
 
 print("***************")
 print("Testing Results")
+
+my_cars = [[89000, 10], [150, 20]]
+my_predicitons = model.predict(my_cars)
+print(my_predicitons)
